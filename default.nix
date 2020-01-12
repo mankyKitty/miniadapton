@@ -3,7 +3,7 @@ with import <nixpkgs> {
     (self: super: {
       haskellPackages = super.haskellPackages.override (oldHask: {
         overrides = super.lib.composeExtensions (oldHask.overrides or (_: _: {})) (hself: hsuper: {
-          # algebraic-graphs = hsuper.callHackage "algebraic-graphs" "0.4" {};
+          graphite = hsuper.callHackage "graphite" "0.10.0.1" {};
         });
       });
     })
